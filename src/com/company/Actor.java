@@ -1,50 +1,22 @@
 package com.company;
 
-public class Actor {
-    String name;
-    String lastName;
-    double salary;
+public class Actor extends Staff {
+
     SexEnum sex;
+
+    public Actor(String name, String lastName, double salary, SexEnum sex) {
+        super(name, lastName, salary);
+        this.sex = sex;
+    }
 
     @Override
     public String toString() {
         return "Actor{" +
-            "name='" + name + '\'' +
+            "sex=" + sex +
+            ", name='" + name + '\'' +
             ", lastName='" + lastName + '\'' +
             ", salary=" + salary +
-            ", sex=" + sex +
             '}';
-    }
-
-    public Actor(String name, String lastName, double salary, SexEnum sex) {
-        this.name = name;
-        this.lastName = lastName;
-        this.salary = salary;
-        this.sex = sex;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
     }
 
     public SexEnum getSex() {
